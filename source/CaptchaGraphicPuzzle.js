@@ -5,7 +5,7 @@ var gGraphicThis = null;
 
 enyo.kind({
 	name: "tld.CaptchaGraphicPuzzle"
-  , kind: enyo.canvas.Shape
+  , kind:"enyo.canvas.Shape"
   , nodeTag: "canvas"
   , published: {
       localMode: true
