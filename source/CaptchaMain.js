@@ -100,7 +100,6 @@ enyo.kind({
           this.$.drawerText.setOpen(false);
           this.$.drawerInstruction.setOpen(false);
           this.$.drawerComplete.setOpen(true);
-          this.$.drawerToggle.setOpen(false);
         }
     }
     /**
