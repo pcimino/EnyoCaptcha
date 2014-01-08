@@ -17,6 +17,7 @@ enyo.kind({
     , published: {
         local: true
         , passed: false
+        , solved: false
         , serverUrl: ''
         , callback: null
         , solution: ''
@@ -110,6 +111,7 @@ enyo.kind({
     , puzzleSolved: function(inSender, inEvent) {
         this.solution = inEvent.data;
         if (this.local) {
+            this.solved = true;
             this.activateDrawer(2);
         } else {
         }
@@ -142,6 +144,7 @@ enyo.kind({
     * Resets the captcha
     */
     , reset: function() {
+        this.solved = false;
         this.randomizeSeedArray();
         this.$.captchaGraphicPuzzle.displayCaptcha(this.seedValues);
     }

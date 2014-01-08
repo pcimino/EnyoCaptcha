@@ -20,6 +20,13 @@ enyo.kind({
   , validateSolution: function(result) {
       if (result == gResult) {
         gGraphicThis.bubble('onPuzzleSolved', {data: result});
+
+        /* Need to figure out why these don't work for dynamically created components
+          gGraphicThis.bubble('onPuzzleSolved', {data: result});
+          gGraphicThis.bubbleUp('onPuzzleSolved', {data: result});
+          gGraphicThis.getParent().bubble('onPuzzleSolved', {data: result});
+          gGraphicThis.getParent().bubbleUp('onPuzzleSolved', {data: result});
+        */
       }
   }
   , displayCaptcha: function(seedArray, width, height) {
