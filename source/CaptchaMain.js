@@ -17,6 +17,7 @@ enyo.kind({
     , published: {
         local: true
         , passed: false
+        , solved: false
         , serverUrl: ''
         , callback: null
         , solution: ''
@@ -51,7 +52,7 @@ enyo.kind({
         this.$.canvas.attributes.height = this.height
 
         this.$.canvas.attributes.height = this.height;
-        this.$.captchaGraphicPuzzle.displayCaptcha(this.seedValues);
+        this.$.captchaGraphicPuzzle.displayCaptcha(this.seedValues, this.width, this.height);
         this.$.successDisplayContent.setContent(this.successDisplayText);
 
 /* Turned off for now, having issues with text Captcha inputs
@@ -110,6 +111,7 @@ enyo.kind({
     , puzzleSolved: function(inSender, inEvent) {
         this.solution = inEvent.data;
         if (this.local) {
+            this.solved = true;
             this.activateDrawer(2);
         } else {
         }
@@ -142,8 +144,9 @@ enyo.kind({
     * Resets the captcha
     */
     , reset: function() {
+        this.solved = false;
         this.randomizeSeedArray();
-        this.$.captchaGraphicPuzzle.displayCaptcha(this.seedValues);
+        this.$.captchaGraphicPuzzle.displayCaptcha(this.seedValues, this.width, this.height);
     }
     , tabActivated: function(inSender, inEvent) {
         if (inEvent.originator.getActive()) {
@@ -155,3 +158,4 @@ enyo.kind({
         }
     }
 });
+
