@@ -3,7 +3,6 @@
 * Not ideal for lots of reasons, the most glaring is the hardcoded length of 4 elements
 * Need to create an array of components and add them dynamically
 */
-var TT={}
 enyo.kind({
   name: "tld.CaptchaTextPuzzle"
   , kind: "enyo.Control"
@@ -114,4 +113,6 @@ enyo.kind({
       }
     console.log(enteredValue +":" + soln)
 	}
-});
+});
+
+

@@ -31,8 +31,10 @@ enyo.kind({
   }
   , displayCaptcha: function(seedArray, width, height) {
       gGraphicThis.ctx.clearRect(0, 0, width, height);
-      buildCaptcha(gGraphicThis.ctx, gGraphicThis.getParent().getContainer().getId(), seedArray, gGraphicThis.validateSolution);
+      buildCaptcha(gGraphicThis.ctx, gGraphicThis.getParent().getContainer().getId(), seedArray, gGraphicThis.validateSolution, width, height);
   }
 
 });
+
+
 
