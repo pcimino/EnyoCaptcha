@@ -15,15 +15,13 @@ In local mode the captcha is very hackable by anyone with a JavaScript console (
 In server mode (TBD), the module makes a call to a server
 
 ## Example of local mode here:
-http://jsfiddle.net/pcimino/VBNSM/
+[http://jsfiddle.net/pcimino/YqKdz/](http://jsfiddle.net/pcimino/YqKdz/)
 
 ## Implementing
 In Enyo, instantiate the kind with optional arguments. The parent class can implement a listener for the event, or query the object for its status.
 
-{kind: 'enyo.Controller',
-components: [{kind: tld.Main, successDisplayText: 'Congratulations!', width:300, height:300}],
-
-}
+> {kind: 'enyo.Controller',
+components: [{kind: tld.Main, successDisplayText: 'Congratulations!', width:300, height:300}]}
 
 ## NOTES
 ###Server Mode
