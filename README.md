@@ -21,7 +21,7 @@ http://jsfiddle.net/pcimino/VBNSM/
 In Enyo, instantiate the kind with optional arguments. The parent class can implement a listener for the event, or query the object for its status.
 
 {kind: 'enyo.Controller',
-components: [{kind: tld.CaptchaMain, successDisplayText: 'Congratulations!', width:300, height:300}],
+components: [{kind: tld.Main, successDisplayText: 'Congratulations!', width:300, height:300}],
 
 }
 
