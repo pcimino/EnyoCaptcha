@@ -1,5 +1,25 @@
 Enyo Captcha
 =============
+## What's a Captcha?
+Just in case you don't know, a captcha is a tool to try and prevent automated programs (robots) from accessing websites. This often take the form of an image or images containing obfuscated text designed to prevent OCR software form reading the text. You've probably seen something like this:
+
+<img src="http://0.tqn.com/d/netforbeginners/1/0/s/O/CAPTCHA1.png"> 
+
+Enyo Captcha presents the user with a drag and drop interface, which hopefully, most web robots haven't figured out yet. It's rough but here's an example:
+
+<img src="https://raw2.github.com/pcimino/gallery/gh-pages/gallery_images/tld.Captcha.jpg" >
+
+The user drags the squares into the matching empty box (color and approx size). Once the target is in the box it locks in place. After all boxes are locked, the puzzle is solved.
+
+# Known Issues
+## Text Version
+There is a text version that presents the user with sets of numbers which they enter in the appropiate order. A toggle button will be presented and the user can choose which puzzle to use. That isn't working yet.
+
+##Server Mode
+If and when complete it [will integrate with this project](https://github.com/pcimino/nodejs-restify-mongodb), and the client won't have control over determining if the puzzle was successfully unlocked. A generated code will be sent with a form submission which has to match the generated code on the server.
+
+##Events
+Seem to be an issue with events bubbling up (or failing to). Works fine if you use the component statically, but dynamically created components seem to get lost.
 
 ## Work in progress
 The concept is to let the user solve a simple graphical puzzle instead having them try and interpret images containing distorted text.
