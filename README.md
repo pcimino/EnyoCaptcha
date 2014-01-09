@@ -1,9 +1,16 @@
 Enyo Captcha
 =============
 
-Work in progress. The concept is to let the user solve a simple graphical puzzle instead having them try and interpret images containing distorted text.
+## Work in progress
+The concept is to let the user solve a simple graphical puzzle instead having them try and interpret images containing distorted text.
 
+## Security
 Not a truly secure captcha. If a developer has access to the JavaScript console they can figure out how to solve the captcha. A future enhancement with the seed and validation on the server side will be a bit more secure, but still decipherable. At any rate it's a start to slow down the robots.
+
+## Limited use
+Not sure how much use this has in a mobile app. I developed this because I'm working on an Enyo based turnkey web template. [Which you can get here](https://github.com/pcimino/enyo-mvc-web-app).
+
+You can also see the captcha on [JSFiddle here](http://jsfiddle.net/pcimino/YqKdz/](http://jsfiddle.net/pcimino/YqKdz/).
 
 # Enyo Kind for including a Captcha
 This captcha is a simple graphical puzzle (puzzle is overstatement) requiring some shape dragging.
