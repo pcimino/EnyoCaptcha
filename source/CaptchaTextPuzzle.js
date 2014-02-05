@@ -42,7 +42,7 @@ enyo.kind({
   }
   , legalKey: function(inSender, inEvent) {
       var legal = 'ABCDEFGHJKLMNPQRSTUVWXYZ'; // should be coming from parent
-      if (inSender.getValue().length == 1 && legal.indexOf(inSender.getValue().toUpperCase()) > 0) {
+      if (inSender.getValue().length == 1 && legal.indexOf(inSender.getValue().toUpperCase()) >= 0) {
         inSender.setValue(inSender.getValue().toUpperCase());
         var checkFlag = 0;
         for (var i = 0; i < this.arraySuffix.length; i++) {

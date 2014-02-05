@@ -104,10 +104,14 @@ enyo.kind({
     */
     , puzzleSolved: function(inSender, inEvent) {
         this.solution = inEvent.data;
+        this.setPassed(true);
+
         if (this.local) {
             this.activateDrawer(2);
         } else {
+          //TODO Only works in local mode for now
         }
+        if (this.callback) this.callback(inSender, inEvent);
     }
     /**
     * Had a text version, might still use it. The User sees letters next tot he number sets and enters the letters in the proper
