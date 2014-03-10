@@ -92,7 +92,7 @@ enyo.kind({
       if (solved) {
         this.bubble('onPuzzleSolved', {data: solution});
       } else {
-          this.inputArr = ['', '', '', ''];
+        this.inputArr = ['', '', '', ''];
       }
 	}
 });

@@ -21,6 +21,8 @@ function buildCaptcha(ctx, canvasId, seedInput, callBack) {
   draw(ctx, canvasId);
 }
 function draw(ctx, canvasId) {
+  gFinishedValues = [];
+
   gStage = new Kinetic.Stage({
     container: canvasId,
     width: gWidth,
@@ -201,4 +203,5 @@ function isBoxOverlapping(layer, box1, box2) {
 
 
 
-
+
+
