@@ -13,7 +13,7 @@ In local mode the captcha is very hackable by anyone with a JavaScript console (
 In server mode, the module makes a call to a server
 
 ## Example of local mode here:
-http://jsfiddle.net/pcimino/VBNSM/
+http://jsfiddle.net/pcimino/YqKdz/
 
 ## NOTES
 ###Server Mode 
